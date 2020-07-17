@@ -73,6 +73,7 @@ var orm = {
   deleteOne: function(table, condition, cb) {
     var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
     console.log(dbQuery);
+    console.log("delete");
 
     connection.query(dbQuery, function(err, res) {
       if (err) {

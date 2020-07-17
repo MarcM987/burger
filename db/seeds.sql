@@ -4,3 +4,5 @@ INSERT INTO burgers(burger_name, devoured)
 VALUES ("BIGsmallBurger", TRUE);
 INSERT INTO burgers(burger_name, devoured)
 VALUES ("SMALLsmallBurger", FALSE);
+
+SELECT * FROM burgers

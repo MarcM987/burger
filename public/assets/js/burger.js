@@ -39,6 +39,9 @@ $(function() {
       event.preventDefault();
   
       var id = $(this).data("id");
+
+      console.log("delete");
+      console.log("id", id);
   
       // Send the DELETE request.
       $.ajax({
