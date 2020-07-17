@@ -35,14 +35,8 @@ var orm = {
   },
   insertOne: function(table, cols, vals, cb) {
     var dbQuery =
-      "INSERT INTO " +
-      table +
-      " (" +
-      cols.toString() +
-      ") " +
-      "VALUES (" +
-      createQmarks(vals.length) +
-      ") ";
+      "INSERT INTO " + table + " (" + cols.toString() + ") " +
+      "VALUES (" + createQmarks(vals.length) +") ";
 
     console.log(dbQuery);
     connection.query(dbQuery, vals, function(err, res) {
@@ -54,12 +48,9 @@ var orm = {
   },
   updateOne: function(table, objColVals, condition, cb) {
     var dbQuery =
-      "UPDATE " +
-      table +
-      " SET " +
-      translateSql(objColVals) +
-      " WHERE " +
-      condition;
+      "UPDATE " + table + 
+      " SET " + translateSql(objColVals) + 
+      " WHERE " + condition;
 
     console.log(dbQuery);
 
